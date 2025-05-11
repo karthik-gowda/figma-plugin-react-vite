@@ -1,0 +1,39 @@
+{
+  "name": "figma-plugin-template",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "rimraf dist && npm run build-ui && npm run build-code",
+    "build-ui": "vite build --mode ui",
+    "build-code": "vite build --mode code",
+    "watch": "rimraf dist && concurrently \"npm run build-ui -- --watch\" \"npm run build-code -- --watch\""
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.82.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.49",
+    "rimraf": "^5.0.1",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-singlefile": "^0.13.5"
+  }
+}
